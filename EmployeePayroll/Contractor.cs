@@ -23,7 +23,7 @@ namespace EmployeePayroll
                 throw new ArgumentException("Days cannot BE negative.");
             Name = name.Trim();
             DailyRate = dailyRate;
-            DaysWorked = dailyWorked;
+            DaysWorked = daysWorked;
         }
 
         public decimal CalculateMonthlyPay() => DailyRate * DaysWorked;
@@ -35,7 +35,7 @@ namespace EmployeePayroll
         public int CompareTo(IPayable? other)
         {
             if (other == null) return -1;
-            return other.NetPay().CompareTo(((Ipayable)this).NetPay());
+            return other.NetPay().CompareTo(((IPayable)this).NetPay());
         }
     }
 }

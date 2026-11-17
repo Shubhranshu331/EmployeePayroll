@@ -21,7 +21,7 @@ namespace EmployeePayroll
 
         public abstract decimal CalculateMonthlyPay();
 
-        public virtual decimal CalculateBonus();
+        public virtual decimal CalculateBonus() => 0m;
 
         public decimal CalculateTax()
         {

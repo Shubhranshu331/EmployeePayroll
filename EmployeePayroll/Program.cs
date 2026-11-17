@@ -60,7 +60,7 @@
             Console.WriteLine($"Added.");
         }
 
-        static void AddPPartTime()
+        static void AddPartTime()
         {
             string name = ReadText("Name: ");
             decimal rate = ReadDecimal("Hourly rate: ");
@@ -105,7 +105,7 @@
             }
 
             Console.WriteLine($"{"Name",-10}{"Role",-12}{"Pay",12}{"Bonus",12}{"Tax",12}{"Net",12}");
-            Console.WriteLine(new string("-", 70));
+            Console.WriteLine(new string('-', 70));
 
             foreach (IPayable p in payroll.GetSortedByPay())
             {
@@ -136,7 +136,7 @@
                 Console.Write(prompt);
                 if (int.TryParse(Console.ReadLine(), out int value))
                     return value;
-                Console.WriteLine("Please enter a whole number.")
+                Console.WriteLine("Please enter a whole number.");
             }
         }
     }
